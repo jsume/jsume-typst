@@ -1,0 +1,358 @@
+{
+  "$schema": "https://unpkg.com/@jsume/schemas/dist/draft-2020-12.json",
+  "basics": {
+    "name": "约翰·多伊",
+    "label": "软件工程师",
+    "image": "https://picsum.photos/200/300",
+    "email": "john@example.com",
+    "phone": "(912) 555-4321",
+    "url": "https://johndoe.com",
+    "summary": "我是约翰·多伊，一名拥有5年网页开发经验的软件工程师……",
+    "location": {
+      "city": "纽约",
+      "country": "美国"
+    },
+    "profiles": [
+      {
+        "network": "X/Twitter",
+        "username": "john",
+        "url": "https://x.com/john"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "johndoe",
+        "url": "https://linkedin.com/in/johndoe"
+      },
+      {
+        "network": "GitHub",
+        "username": "johndoe",
+        "url": "https://github.com/johndoe"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "The Company",
+      "location": "远程",
+      "position": "软件工程师",
+      "website": "https://company.com",
+      "startDate": {
+        "year": 2023,
+        "month": 1
+      },
+      "endDate": false,
+      "summary": "这是我工作的总结……",
+      "highlights": [
+        "亮点 1",
+        "亮点 2"
+      ]
+    },
+    {
+      "company": "Startup Labs",
+      "location": "旧金山",
+      "position": "前端开发工程师",
+      "website": "https://startuplabs.com",
+      "startDate": {
+        "year": 2020,
+        "month": 6
+      },
+      "endDate": {
+        "year": 2022,
+        "month": 12
+      },
+      "summary": "参与构建可扩展的前端应用程序。",
+      "highlights": [
+        "用 React 实现了设计系统",
+        "将应用性能优化了30%"
+      ]
+    },
+    {
+      "company": "Tech Solutions",
+      "location": "纽约",
+      "position": "开发实习生",
+      "website": "https://techsolutions.com",
+      "startDate": {
+        "year": 2019,
+        "month": 6
+      },
+      "endDate": {
+        "year": 2019,
+        "month": 9
+      },
+      "summary": "暑期实习，参与后端 API 开发。",
+      "highlights": [
+        "构建 RESTful API",
+        "编写自动化测试套件"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "项目",
+      "website": "https://project.com",
+      "githubUrl": "https://github.com/slidevjs/slidev",
+      "startDate": {
+        "year": 2023,
+        "month": 1
+      },
+      "endDate": false,
+      "summary": "这是我项目的总结……",
+      "highlights": [
+        "亮点 1",
+        "亮点 2"
+      ]
+    },
+    {
+      "name": "任务追踪应用",
+      "website": "https://tasktracker.com",
+      "githubUrl": "https://github.com/vitest-dev/vitest",
+      "startDate": {
+        "year": 2022,
+        "month": 3
+      },
+      "endDate": {
+        "year": 2022,
+        "month": 10
+      },
+      "summary": "一个带有实时同步的任务管理应用。",
+      "highlights": [
+        "使用 React 和 Firebase 构建",
+        "实现了离线优先架构"
+      ]
+    },
+    {
+      "name": "个人作品集网站",
+      "website": "https://johndoe.dev",
+      "githubUrl": "https://github.com/unocss/unocss",
+      "startDate": {
+        "year": 2021,
+        "month": 5
+      },
+      "endDate": {
+        "year": 2021,
+        "month": 8
+      },
+      "summary": "个人网站，用于展示项目和博客。",
+      "highlights": [
+        "部署在 Netlify",
+        "进行 SEO 优化以提升搜索排名"
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "name": "万维网",
+      "releaseDate": {
+        "year": 2023,
+        "month": 1
+      },
+      "publisher": "IEEE《计算机》杂志",
+      "summary": "讨论了万维网、HTTP、HTML。",
+      "url": "https://www.computer.org.example.com/csdl/mags/co/1996/10/rx069-abs.html"
+    },
+    {
+      "name": "现代前端架构",
+      "releaseDate": {
+        "year": 2022,
+        "month": 7
+      },
+      "publisher": "ACM Web Journal",
+      "summary": "探讨微前端和设计模式。",
+      "url": "https://acm.org/frontend-architectures"
+    },
+    {
+      "name": "优化网页性能",
+      "releaseDate": {
+        "year": 2021,
+        "month": 3
+      },
+      "publisher": "Web Dev Monthly",
+      "summary": "改进网页应用性能的技术。",
+      "url": "https://webdevmonthly.com/performance"
+    }
+  ],
+  "education": [
+    {
+      "institution": "示例大学",
+      "location": "线上",
+      "major": "计算机科学",
+      "degree": "理学学士",
+      "gpa": 3.8,
+      "startDate": {
+        "year": 2023,
+        "month": 1
+      },
+      "endDate": {
+        "year": 2023,
+        "month": 1
+      },
+      "activities": [
+        "活动 1",
+        "活动 2"
+      ],
+      "courses": [
+        "课程 1",
+        "课程 2"
+      ]
+    },
+    {
+      "institution": "示例社区学院",
+      "location": "纽约",
+      "major": "信息技术",
+      "degree": "副学士学位",
+      "gpa": 3.6,
+      "startDate": {
+        "year": 2020,
+        "month": 9
+      },
+      "endDate": {
+        "year": 2022,
+        "month": 5
+      },
+      "activities": [
+        "学生技术俱乐部",
+        "黑客马拉松参与者"
+      ],
+      "courses": [
+        "数据库系统",
+        "网络安全"
+      ]
+    },
+    {
+      "institution": "示例高中",
+      "location": "加州",
+      "major": "理科",
+      "degree": "高中毕业证",
+      "gpa": 3.9,
+      "startDate": {
+        "year": 2016,
+        "month": 9
+      },
+      "endDate": {
+        "year": 2019,
+        "month": 6
+      },
+      "activities": [
+        "数学俱乐部",
+        "机器人团队"
+      ],
+      "courses": [
+        "高等数学",
+        "物理"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "认证 Kubernetes 管理员",
+      "issueDate": {
+        "year": 2023,
+        "month": 1
+      },
+      "expDate": false,
+      "issuer": "CNCF",
+      "url": "https://www.youracclaim.com/badges/xxxx"
+    },
+    {
+      "name": "AWS 认证解决方案架构师",
+      "issueDate": {
+        "year": 2022,
+        "month": 5
+      },
+      "expDate": {
+        "year": 2025,
+        "month": 5
+      },
+      "issuer": "亚马逊云服务",
+      "url": "https://aws.amazon.com/certification/certified-solutions-architect"
+    },
+    {
+      "name": "Google 专业云架构师",
+      "issueDate": {
+        "year": 2021,
+        "month": 8
+      },
+      "expDate": {
+        "year": 2024,
+        "month": 8
+      },
+      "issuer": "谷歌云",
+      "url": "https://cloud.google.com/certification/cloud-architect"
+    }
+  ],
+  "awards": [
+    {
+      "title": "月度最佳员工",
+      "date": {
+        "year": 2023,
+        "month": 1,
+        "day": 1
+      },
+      "awarder": "科技公司股份有限公司",
+      "summary": "因出色表现和对团队的奉献而获奖。",
+      "description": "我在团队中发挥了关键作用，帮助团队实现目标……"
+    },
+    {
+      "title": "最佳黑客马拉松项目",
+      "date": {
+        "year": 2022,
+        "month": 10,
+        "day": 15
+      },
+      "awarder": "HackNYC",
+      "summary": "在全市范围的黑客马拉松中获得第一名。",
+      "description": "构建了一个由 AI 驱动的任务管理器，令评委印象深刻。"
+    },
+    {
+      "title": "优秀学生名单",
+      "date": {
+        "year": 2021,
+        "month": 5,
+        "day": 30
+      },
+      "awarder": "示例大学",
+      "summary": "取得了优异的学业成绩。",
+      "description": "连续多个学期保持 GPA 3.8 以上。"
+    }
+  ],
+  "skills": [
+    {
+      "name": "前端开发",
+      "keywords": [
+        "JavaScript",
+        "React",
+        "Vue"
+      ]
+    },
+    {
+      "name": "后端开发",
+      "keywords": [
+        "Node.js",
+        "Express",
+        "MongoDB"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "keywords": [
+        "Docker",
+        "Kubernetes",
+        "CI/CD"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "英语",
+      "fluency": "流利"
+    },
+    {
+      "language": "中文",
+      "fluency": "母语"
+    },
+    {
+      "language": "西班牙语",
+      "fluency": "中级"
+    }
+  ]
+}

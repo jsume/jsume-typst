@@ -1,3 +1,5 @@
+#import "@preview/zh-format:0.1.0": *
+#import "@preview/nerd-icons:0.2.0": change-nerd-font
 #import "./components/sections.typ": *
 
 #let jsume(
@@ -6,7 +8,8 @@
   bottom-margin: 0.3in,
   left-margin: 0.3in,
   right-margin: 0.3in,
-  font: "Maple Mono NF",
+  font: "New Computer Modern",
+  nerd-font: "",
   font-size: 11pt,
   lang: "en",
   jsume-data: (),
@@ -25,6 +28,12 @@
   let title = basics.at("name", default: "Resume")
   let author = basics.at("name", default: "")
   let label = basics.at("label", default: "")
+
+  show: zh-format
+
+  if nerd-font != "" {
+    change-nerd-font(nerd-font)
+  }
 
   set document(
     title: title,
@@ -45,8 +54,8 @@
   )
 
   set par(
-    leading: 0.8em,
-    spacing: 0.8em,
+    leading: 0.7em,
+    spacing: 0.7em,
   )
 
   set text(

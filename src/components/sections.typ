@@ -1,3 +1,4 @@
+#import "@preview/nerd-icons:0.2.0": nf-icon
 #import "./share.typ": *
 #import "./layouts.typ": *
 #import "../locales.typ": *
@@ -23,11 +24,11 @@
 ) = {
   align(position)[
     #upper(text(base-font-size + 16pt, weight: "extrabold")[#title])
-    #v(-1em)
+    #v(-0.8em)
   ]
   align(position)[
     #upper(text(base-font-size + 6pt, weight: "bold")[#label])
-    #v(-0.5em)
+    #v(-0.3em)
   ]
 }
 
@@ -42,10 +43,26 @@
     #{
       let gap = 0.2em
       let items = (
-        contact_item(location),
-        contact_item(phone, link-type: "tel:"),
-        contact_item(email, link-type: "mailto:"),
-        contact_item(url, link-type: "https://"),
+        [
+          #nf-icon("map")
+          #h(0.4em)
+          #contact_item(location)
+        ],
+        [
+          #nf-icon("phone")
+          #h(0.4em)
+          #contact_item(phone, link-type: "tel:"),
+        ],
+        [
+          #nf-icon("email")
+          #h(0.4em)
+          #contact_item(email, link-type: "mailto:")
+        ],
+        [
+          #nf-icon("web")
+          #h(0.4em)
+          #contact_item(url, link-type: "https://")
+        ],
       )
 
       items
@@ -79,8 +96,17 @@
     let period = start-date + " ~ " + end-date
     generic_2x2(
       (1fr, 1fr),
-      strong(if website == "" { company } else { link(website)[#company] }),
-      [_*#period*_],
+      strong(
+        if website == "" {
+          company
+        } else {
+          [
+            #underline[#link(website)[#company]]
+            #nf-icon("web")
+          ]
+        },
+      ),
+      emph(period),
       emph(position),
       emph(location),
     )
@@ -99,8 +125,14 @@
           website: work-item.at("website", default: ""),
           location: location-to-str(work-item.at("location", default: "")),
           position: work-item.at("position", default: ""),
-          start-date: date-to-str(work-item.at("startDate", default: "")),
-          end-date: date-to-str(work-item.at("endDate", default: "")),
+          start-date: date-to-str(
+            date: work-item.at("startDate", default: ""),
+            lang: lang,
+          ),
+          end-date: date-to-str(
+            date: work-item.at("endDate", default: ""),
+            lang: lang,
+          ),
           summary: work-item.at("summary", default: ""),
           highlights: work-item.at("highlights", default: ()),
         ))
@@ -125,12 +157,26 @@
     let period = start-date + " ~ " + end-date
     generic_2x2(
       (1fr, 1fr),
-      strong(if website == "" { name } else { link(website)[#name] }),
-      [_*#period*_],
+      strong(
+        if website == "" {
+          name
+        } else {
+          [
+            #underline[#link(website)[#name]]
+            #nf-icon("web")
+          ]
+        },
+      ),
+      emph(period),
       if github-url == "" {
         ""
       } else {
-        underline(offset: 0.2em)[#emph(link(github-url)[#"Repo Link"])]
+        [
+          #underline(offset: 0.2em)[
+            #emph(link(github-url)[#"Repo"])
+          ]
+          #nf-icon("link")
+        ]
       },
       "",
     )
@@ -148,8 +194,14 @@
           name: project-item.at("name", default: ""),
           website: project-item.at("website", default: ""),
           github-url: project-item.at("githubUrl", default: ""),
-          start-date: date-to-str(project-item.at("startDate", default: "")),
-          end-date: date-to-str(project-item.at("endDate", default: "")),
+          start-date: date-to-str(
+            date: project-item.at("startDate", default: ""),
+            lang: lang,
+          ),
+          end-date: date-to-str(
+            date: project-item.at("endDate", default: ""),
+            lang: lang,
+          ),
           summary: project-item.at("summary", default: ""),
           highlights: project-item.at("highlights", default: ()),
         ))
@@ -171,8 +223,17 @@
   ) = {
     generic_2x2(
       (1fr, 1fr),
-      strong(if url == "" { name } else { link(url)[#name] }),
-      [_*#release-date*_],
+      strong(
+        if url == "" {
+          name
+        } else {
+          [
+            #underline[#link(url)[#name]]
+            #nf-icon("web")
+          ]
+        },
+      ),
+      emph(release-date),
       emph(publisher),
       "",
     )
@@ -186,7 +247,10 @@
         .map(publication-item => single-publication-item(
           name: publication-item.at("name", default: ""),
           url: publication-item.at("url", default: ""),
-          release-date: date-to-str(publication-item.at("releaseDate", default: "")),
+          release-date: date-to-str(
+            date: publication-item.at("releaseDate", default: ""),
+            lang: lang,
+          ),
           publisher: publication-item.at("publisher", default: ""),
           summary: publication-item.at("summary", default: ""),
         ))
@@ -214,7 +278,7 @@
     generic_2x2(
       (1fr, 1fr),
       [*#institution*],
-      [_*#period*_],
+      emph(period),
       emph(degree),
       emph(location),
     )
@@ -237,8 +301,14 @@
           major: education-item.at("major", default: ""),
           degree: education-item.at("degree", default: ""),
           gpa: education-item.at("gpa", default: ""),
-          start-date: date-to-str(education-item.at("startDate", default: "")),
-          end-date: date-to-str(education-item.at("endDate", default: "")),
+          start-date: date-to-str(
+            date: education-item.at("startDate", default: ""),
+            lang: lang,
+          ),
+          end-date: date-to-str(
+            date: education-item.at("endDate", default: ""),
+            lang: lang,
+          ),
           activities: education-item.at("activities", default: ()),
           courses: education-item.at("courses", default: ()),
         ))
@@ -261,8 +331,17 @@
     let period = issue-date + " ~ " + exp-date
     generic_2x2(
       (1fr, 1fr),
-      strong(if url == "" { name } else { link(url)[#name] }),
-      [_*#period*_],
+      strong(
+        if url == "" {
+          name
+        } else {
+          [
+            #underline[#link(url)[#name]]
+            #nf-icon("web")
+          ]
+        },
+      ),
+      emph(period),
       emph(issuer),
       "",
     )
@@ -270,15 +349,23 @@
 
   [
     = #i18n.title.certifications.at(lang)
-    #for certificate-item in data {
-      single-certificate-item(
-        name: certificate-item.at("name", default: ""),
-        url: certificate-item.at("url", default: ""),
-        issue-date: date-to-str(certificate-item.at("issueDate", default: "")),
-        exp-date: date-to-str(certificate-item.at("expDate", default: "")),
-        issuer: certificate-item.at("issuer", default: ""),
-      )
-    }
+    #(
+      data
+        .map(certificate-item => single-certificate-item(
+          name: certificate-item.at("name", default: ""),
+          url: certificate-item.at("url", default: ""),
+          issue-date: date-to-str(
+            date: certificate-item.at("issueDate", default: ""),
+            lang: lang,
+          ),
+          exp-date: date-to-str(
+            date: certificate-item.at("expDate", default: ""),
+            lang: lang,
+          ),
+          issuer: certificate-item.at("issuer", default: ""),
+        ))
+        .join(v(0.6em))
+    )
   ]
 }
 
@@ -296,7 +383,7 @@
     generic_2x2(
       (auto, 1fr),
       strong(title),
-      [_*#date*_],
+      emph(date),
       emph(awarder),
       "",
     )
@@ -316,7 +403,10 @@
       data
         .map(award-item => single-award-item(
           title: award-item.at("title", default: ""),
-          date: date-to-str(award-item.at("date", default: "")),
+          date: date-to-str(
+            date: award-item.at("date", default: ""),
+            lang: lang,
+          ),
           awarder: award-item.at("awarder", default: ""),
           summary: award-item.at("summary", default: ""),
           description: award-item.at("description", default: ""),

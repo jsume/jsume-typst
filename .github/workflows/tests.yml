@@ -13,8 +13,6 @@ jobs:
       matrix:
         # add any other Typst versions that your package should support
         typst-version:
-          - typst: 0.12
-            tytanic: 0.1
           - typst: 0.13
             tytanic: 0.2
           - typst: 0.14
@@ -45,6 +43,14 @@ jobs:
         uses: typst-community/setup-typst@v4
         with:
           typst-version: ${{ matrix.typst-version.typst }}
+
+      - name: Install Symbols Nerd Font Mono
+        run: |
+          sudo mkdir -p /usr/share/fonts/truetype/nerd-fonts
+          curl -L -o /tmp/SymbolsNerdFontMono.zip \
+            https://github.com/ryanoasis/nerd-fonts/releases/latest/download/NerdFontsSymbolsOnly.zip
+          sudo unzip -o /tmp/SymbolsNerdFontMono.zip -d /usr/share/fonts/truetype/nerd-fonts
+          sudo fc-cache -fv
 
       - name: Run test suite
         run: just test

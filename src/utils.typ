@@ -1,3 +1,5 @@
+#import "./locales.typ": i18n
+
 #let location-to-str(location) = {
   if type(location) == str {
     return location
@@ -18,9 +20,12 @@
   }
 }
 
-#let date-to-str(date) = {
+#let date-to-str(
+  date: false,
+  lang: "en",
+) = {
   if date == false {
-    return "Present"
+    return i18n.present.at(lang)
   } else if type(date) == str {
     return date
   } else if type(date) == type((:)) {
