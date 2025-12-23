@@ -1,4 +1,4 @@
-#import "@preview/zh-format:0.1.0": *
+#import "@preview/zh-format:0.1.0": zh-format
 #import "@preview/nerd-icons:0.2.0": change-nerd-font
 #import "./components/sections.typ": *
 
@@ -8,7 +8,7 @@
   bottom-margin: 0.3in,
   left-margin: 0.3in,
   right-margin: 0.3in,
-  font: "New Computer Modern",
+  font: "Libertinus Serif",
   nerd-font: "Symbols Nerd Font",
   font-size: 11pt,
   lang: "en",

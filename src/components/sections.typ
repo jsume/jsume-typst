@@ -1,8 +1,8 @@
 #import "@preview/nerd-icons:0.2.0": nf-icon
-#import "./share.typ": *
-#import "./layouts.typ": *
-#import "../locales.typ": *
-#import "../utils.typ": *
+#import "./share.typ": box-text
+#import "./layouts.typ": generic_2x2
+#import "../locales.typ": i18n
+#import "../utils.typ": date-to-str, location-to-str
 
 #let contact_item(value, link-type: "", prefix: "") = {
   if value != "" {
