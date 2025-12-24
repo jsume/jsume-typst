@@ -2,11 +2,11 @@
 
 An easy to use resume template. Just provide your [jsume](https://github.com/jsume/jsume/tree/main/packages/schemas) JSON file and generate a beautiful resume in Typst.
 
-# Sample Resume
+## Sample Resume
 
 ![Sample Resume](./thumbnail.png)
 
-# Quick Start
+## Quick Start
 
 First, create your own jsume JSON file (e.g. `en-US.jsume.json`) by using the [jsume CLI](https://github.com/jsume/jsume/blob/main/packages/cli/README.md). And make sure validate your JSON file with [jsume CLI](https://github.com/jsume/jsume/blob/main/packages/cli/README.md) `jsume validate jsume-en.json` after editing.
 
@@ -40,19 +40,20 @@ There are some options with default values you can customize:
 ) = { /*...*/ }
 ```
 
-# I18n
+## I18n
 
 This template supports:
 
 - [x] English (`en-US`)
 - [x] 简体中文 (`zh-CN`)
-- [ ] 繁體中文 (`zh-HK`)
-- [ ] 繁體中文 (`zh-TW`)
-- [ ] 日本語 (`ja-JP`)
-- [ ] Español (`es-ES`)
-- [ ] Français (`fr-FR`)
-- [ ] Deutsch (`de-DE`)
-- [ ] Русский (`ru-RU`)
-- [ ] 한국어 (`ko-KR`)
+- [x] 繁體中文 (`zh-HK`)
+- [x] 繁體中文 (`zh-TW`)
+- [x] 日本語 (`ja-JP`)
+- [x] Español (`es-ES`)
+- [x] Français (`fr-FR`)
+- [x] Deutsch (`de-DE`)
+- [x] Русский (`ru-RU`)
+- [x] 한국어 (`ko-KR`)
 
-More languages will be supported in the future.
+> [!NOTE]
+> Translations are done by AI, please open an issue or PR for any mistakes or new languages.
