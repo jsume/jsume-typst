@@ -26,14 +26,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
-## [0.1.0] - 2025-01-01
+## [0.1.0] - 2025-12-24
 
 ### Added
 
-<!-- Describe the feature set of the initial release here -->
--
--
--
+- Initial resume template based on the [JSON Resume](https://jsonresume.org/) schema
+- Support for resume sections: work, education, projects, publications, certifications, awards, volunteer, skills, interests, languages, references
+- [Nerd Fonts](https://www.nerdfonts.com/) icon support for contact information (email, phone, URL, location)
+- Multi-language (i18n) support with built-in translations for: `en-US`, `zh-CN`, `zh-HK`, `zh-TW`, `ja-JP`, `es-ES`, `fr-FR`, `de-DE`, `ru-RU`, `ko-KR`
+- Template package with a ready-to-use `main.typ` example
+
+### Changed
+
+- Locale file naming convention updated to `{locale}.jsume.json` (e.g., `en-US.jsume.json`, `zh-CN.jsume.json`)
+- Enabled Typst template section in package configuration
 
 <!--
 Below are the target URLs for each version
@@ -42,5 +48,5 @@ to the corresponding tag on GitHub, or the diff
 in comparison to the previous release
 -->
 
-[Unreleased]: https://github.com/<author>/<my-package>/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/<author>/<my-package>/releases/tag/v0.1.0
+[Unreleased]: https://github.com/jsume/jsume-typst/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/jsume/jsume-typst/releases/tag/v0.1.0

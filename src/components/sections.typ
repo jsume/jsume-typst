@@ -42,31 +42,13 @@
   align(position)[
     #{
       let gap = 0.2em
-      let items = (
-        [
-          #nf-icon("map")
-          #h(0.4em)
-          #contact_item(location)
-        ],
-        [
-          #nf-icon("phone")
-          #h(0.4em)
-          #contact_item(phone, link-type: "tel:"),
-        ],
-        [
-          #nf-icon("email")
-          #h(0.4em)
-          #contact_item(email, link-type: "mailto:")
-        ],
-        [
-          #nf-icon("web")
-          #h(0.4em)
-          #contact_item(url, link-type: "https://")
-        ],
-      )
+      let items = ()
+      if location != "" { items.push([#nf-icon("map") #h(0.4em) #contact_item(location)]) }
+      if phone != "" { items.push([#nf-icon("phone") #h(0.4em) #contact_item(phone, link-type: "tel:")]) }
+      if email != "" { items.push([#nf-icon("email") #h(0.4em) #contact_item(email, link-type: "mailto:")]) }
+      if url != "" { items.push([#nf-icon("web") #h(0.4em) #underline(offset: 0.3em)[#link(url)[#url]]]) }
 
       items
-        .filter(x => x != none)
         .join([
           #show "|": sep => {
             h(gap)
