@@ -1,5 +1,5 @@
 [package]
-name = "jsume-typst"
+name = "jsume"
 version = "0.1.0"
 entrypoint = "src/lib.typ"
 authors = ["Moozon Wei <muzhenweizh@gmail.com>"]

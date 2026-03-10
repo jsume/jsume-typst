@@ -13,7 +13,7 @@ First, create your own jsume JSON file (e.g. `en-US.jsume.json`) by using the [j
 Then, create a Typst file (e.g. `resume.typ`) and add the following code:
 
 ```typst
-#import "@preview/jsume-typst:0.1.0": *
+#import "@preview/jsume:0.1.0": *
 
 #show: jsume.with(
   lang: "en-US",

@@ -1,4 +1,4 @@
-#import "@preview/jsume-typst:0.1.0": *
+#import "@preview/jsume:0.1.0": *
 
 #show: jsume.with(
   paper: "a4",
