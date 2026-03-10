@@ -1,6 +1,6 @@
 # Jsume (JSON Resume) Typst Template
 
-An easy to use resume template. Just provide your [jsume](https://github.com/jsume/jsume/tree/main/packages/schemas) JSON file and generate a beautiful resume in Typst.
+An easy to use resume template. Just provide your [jsume](https://github.com/jsume/jsume/tree/main/packages/schemas) JSON file and generate a beautiful resume PDF.
 
 ## Sample Resume
 
