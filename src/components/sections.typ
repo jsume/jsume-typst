@@ -48,15 +48,14 @@
       if email != "" { items.push([#nf-icon("email") #h(0.4em) #contact_item(email, link-type: "mailto:")]) }
       if url != "" { items.push([#nf-icon("web") #h(0.4em) #underline(offset: 0.3em)[#link(url)[#url]]]) }
 
-      items
-        .join([
-          #show "|": sep => {
-            h(gap)
-            [|]
-            h(gap)
-          }
-          |
-        ])
+      items.join([
+        #show "|": sep => {
+          h(gap)
+          [|]
+          h(gap)
+        }
+        |
+      ])
     }
   ]
 }
@@ -261,7 +260,7 @@
       (1fr, 1fr),
       [*#institution*],
       emph(period),
-      emph(degree),
+      emph(degree + " · " + major),
       emph(location),
     )
     par(
